@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+  }
+
+  body{
+    background: hsl(30, 38%, 92%);
+
+  }
+
+.outer{
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 40%;
+  border-radius: 3%;
+  height: auto;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.ch1{
+  flex: 1 1 50%;
+}
+
+.ch2{
+  flex: 1 1 50%;
+  box-sizing: border-box;
+  background: white;
+ 
+  padding: 4% 5%;
+}
+
+.ch1 .im1 {
+  width: 100%;
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Removes any extra spacing below the image */
+}
+
+.innerp{
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.im2{
+  display: none;
+}
+
+.per{
+  background: transparent;
+  letter-spacing: 0.1vw;
+  color: gray;
+  font-size: 1vw;
+  font-family: "Montserrat";
+}
+
+.tit{
+  font-family: "Fraunces";
+  font-weight: 700;
+  font-size: 2.2vw;
+  line-height: 100%;
+}
+
+.dec{
+  color: gray;
+  font-family: "Montserrat";
+  line-height: 1.5vw;
+  font-size: 1vw;
+}
+
+.price{
+  font-family: "Fraunces";
+  color: hsl(158, 36%, 37%);
+  font-weight: 700;
+  font-size: 2vw;
+}
+
+.inc{
+  font-family: "Montserrat";
+  font-size: 1vw;
+  color: gray;
+  text-decoration: line-through;
+}
+
+.pr{
+  display: flex;
+  align-items: center;
+  gap: 1vw; /* Adds space between the price and inc spans */
+}
+
+.btn{
+  width: 100%;
+  text-align: center;
+  height: 3vw;
+  display: flex;
+  justify-content: center;
+  gap: 0.5vw;
+  font-family: "Montserrat";
+  align-items: center;
+  color: white;
+  border-radius: 0.5vw;
+  background: hsl(158, 36%, 37%);
+}
+
+.btn span{
+  font-size: 1.1vw;
+}
+
+.btn img{
+  height: 1.2vw;
+}
+
+.btn:hover{
+  background: hsl(157, 36%, 23%);
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .outer {
+    width: 90%;
+    height: 90%;
+    flex-direction: column;
+  }
+
+  .ch1 {
+    flex: 0 0 auto; /* This makes it take only the space it needs */
+  }
+
+  .ch1 .im1 {
+    display: none;
+  }
+
+  .ch1 .im2 {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .ch2 {
+    flex: 1; /* This makes it take all remaining space */
+  }
+
+  /* You might want to adjust the inner padding for better spacing */
+  .innerp {
+    height: 100%;
+    justify-content: space-evenly;
+  }
+
+  .per{
+    font-size: 5vw;
+    letter-spacing: 1vw;
+  }
+
+  .tit{
+    font-size: 9.6vw;
+  }
+
+  .dec{
+    font-size: 3.9vw;
+    line-height: 5.5vw;
+  }
+
+  .price{
+  font-size: 7vw;
+  }
+
+  .inc{
+  font-size: 4vw;
+  }
+
+  .pr{
+  gap: 3vw; /* Adds space between the price and inc spans */
+  }
+
+
+  .btn{
+    height: 10vw;
+    gap: 2vw;
+    border-radius: 2vw;
+  }
+  
+  .btn span{
+    font-size: 4vw;
+  }
+  
+  .btn img{
+    height: 4vw;
+  }
+}
